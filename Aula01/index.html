@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L&L🫶🏻</title>
+
+    <style>
+        body{
+            background: #7e6235;
+            color: rgb(0, 0, 0);
+            text-shadow: -4px 2px 2px #634f4f;
+        }
+    
+    </style>
+</head>
+<body>
+    <h1>Aula 01 - HTML | CSS | JS</h1>
+
+    <h2>🚨 Alerta de mensagem 🚨!</h2>
+    <p style="text-align: center;">
+    <button  onclick="alerta()"
+    style="".> Alerta!</button>
+</p>
+
+<h2> Altere a cor do fundo do site clicando em uma das cores</h2>
+<p style="text-align: center;">
+<button onclick="roxo()" style="background:rgba(120, 0, 201, 0.584)">Roxo</button>
+<button onclick="rosa()" style="background: rgba(120, 0, 201, 0.584)">rosa</button>
+<button onclick="verde()" style="background: rgba(120, 0, 201, 0.584)">verde</button>
+
+
+</p>
+<script>
+    console.log("Olá mundo");
+    function alerta(){
+        var nome = prompt("Olá, informe o seu nome!")
+        alert("Olá, alerta!");
+    }
+
+    function roxo(){
+        document.getElementsByTagName("body")[0].style.background = "purple"
+    }
+    function rosa(){
+        document.getElementsByTagName("body")[0].style.background = "pink"
+    }
+    function verde(){
+document.getElementsByTagName("body")[0].style.background = "green"
+    }
+    </script>
+</html>
+
