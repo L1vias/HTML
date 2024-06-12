@@ -9,13 +9,28 @@
 /*variaveis que podem ser usadas para todo o documento*/
 
 :root {
-  --bg-url: url(../img/backgriud.dark.png);
+  --bg-url: url(../img/light019aa9ee313b79112f25752efa5c661f11.jpg);
+  --text-color: #000000;
+  --strocke-color: rgba(115, 10, 163, 0.5);
+  --surface-color: rgba(226, 27, 216, 0.1);
+  --surface-color-hover: rgba(139, 17, 209, 0.932);
+  --switch-bg-url: url(../img/MoonStars.svg);
+  --highlight-color: rgba(35, 22, 216, 0.19);
 }
 
+.light {
+  --bg-url: url(../img/dark0249dfbf77bba4ecfd48298d6a8d6d818a.jpg);
+  --text-color: #dbe3e7;
+  --strocke-color: rgba(14, 5, 134, 0.945);
+  --surface-color: rgba(3, 186, 192, 0.219);
+  --surface-color-hover: rgba(0, 0, 0, 0.2);
+  --switch-bg-url: url(../img/Sun.svg);
+  --highlight-color: rgba(0, 0, 0, 0.849);
+}
 body {
   background: var(--bg-url) no-repeat top center / cover;
   height: 100vh;
-  color: white;
+  color: var(--text-color);
   text-decoration: none;
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -37,7 +52,7 @@ body {
   width: 112px;
   height: 112px;
   border-radius: 50%;
-  border: 4px solid rgba(146, 146, 146, 0.8);
+  border: 4px solid var(--strocke-color);
   object-fit: cover;
 }
 
@@ -59,8 +74,7 @@ body {
   height: 32px;
   border-radius: 50%;
   border: 0;
-  background: #fff url(../img/MoonStars.svg) 
-  no-repeat center;
+  background: #ffffff var(--switch-bg-url) no-repeat center;
   position: absolute;
   z-index: 1;
   top: 50%;
@@ -69,25 +83,27 @@ body {
   animation: slide-out 0.2s;
 }
 
-#botão button:hover{
-  outline: 8px solid rgba(255, 255, 255, 0.2);
+.light #botão button {
+  animation: slide-in 0.2s forwards;
+}
+#botão button:hover {
+  outline: 8px solid var(--surface-color-hover);
   transition: all 0.2s;
 }
 
-#botão span{
-  background: rgba(255, 255, 255, 0.1);
+#botão span {
+  background: var(--surface-color);
   display: block;
   width: 64px;
   height: 24px;
-  border: 1px solid rgba(255, 255, 255, 0.5);
+  border: 1px solid var(--strocke-color);
   border-radius: 24px;
 
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
-
 }
 
-#links ul{
+#links ul {
   list-style: none;
   display: flex;
   flex-direction: column;
@@ -95,62 +111,59 @@ body {
   padding: 24px;
 }
 
-#links ul li a{
+#links ul li a {
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 16px 24px;
-  border: 1px solid rgba(255, 255, 255, 0.5);
+  border: 1px solid var(--strocke-color);
   border-radius: 8px;
-  background: rgba(255, 255, 255, 0.1);
+  background: var(--surface-color);
   text-decoration: none;
   font-weight: bold;
-  color: #fff;
-
+  color: var(--text-color)
 }
 
-#links ul li a:hover{
-background: rgba(255, 255, 255, 0.2);
-border: 1px solid #fff;
-transition: all 1s;
+#links ul li a:hover {
+  background: var(--surface-color);
+  border: 1px solid var(--text-color);
+  transition: all 1s;
 }
-#redeSocial{
+#redeSocial {
   display: flex;
   justify-content: center;
   padding: 24px;
   gap: 16px;
   font-size: 24px;
-
 }
 #redeSocial a {
   text-decoration: none;
-  color: #fff;
+  color:var(--text-color);
 }
 
-#footer{
+#footer {
   text-align: center;
   font-size: 14px;
   padding: 24px;
 }
-#footer a{
+#footer a {
   text-decoration: none;
-  color: #fff;
+  color: var(--text-color);
 }
 /*animação do botão*/
-@keyframes slide-out{
+@keyframes slide-out {
   from {
     left: 50%;
   }
-  to{
+  to {
     left: 0;
   }
 }
-@keyframes slide-in{
-  from{
+@keyframes slide-in {
+  from {
     left: 0;
   }
-  to{
+  to {
     left: 50%;
-  
   }
 }
